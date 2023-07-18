@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-staff-directory-client-side-solution",
+    "id": "d3f637ed-f6a6-4fab-93de-f1bfe4ea744a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "MRS Company Ltd",
+      "websiteUrl": "https://mrscompany.com",
+      "privacyUrl": "https://mrscompany.com/policies",
+      "termsOfUseUrl": "https://mrscompany.com/policies",
+      "mpnId": "1118755"
+    },
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft.Graph",
+        "scope": "User.ReadBasic.All"
+      },
+      {
+        "resource": "Microsoft.Graph",
+        "scope": "Chat.ReadWrite"
+      }
+    ],
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-staff-directory description"
+      },
+      "longDescription": {
+        "default": "spfx-staff-directory description"
+      },
+      "screenshotPaths": [
+        "./assets/sp-staff-directory.gif"
+      ],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-staff-directory Feature",
+        "description": "The feature that activates elements of the spfx-staff-directory solution.",
+        "id": "f16238ac-5c11-4a12-9374-08c4ee21155d",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-staff-directory.sppkg"
+  }
+}
