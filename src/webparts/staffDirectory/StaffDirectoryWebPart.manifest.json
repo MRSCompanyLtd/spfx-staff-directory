@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "8030369d-68ad-4976-aa95-a75305b9036e",
+  "alias": "StaffDirectoryWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Advanced" },
+    "title": { "default": "Staff Directory" },
+    "description": { "default": "Staff Directory web part displaying users in the company tenant." },
+    "officeFabricIconFontName": "Group",
+    "properties": {
+      "title": "Staff Directory",
+      "pageSize": 12,
+      "departments": [],
+      "showDepartmentFilter": false,
+      "group": ""
+    }
+  }]
+}
