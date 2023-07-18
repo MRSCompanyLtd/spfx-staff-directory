@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "@fluentui/react": "^7.199.1",
+    "@microsoft/mgt-element": "^3.0.0",
     "@microsoft/mgt-react": "^3.0.0",
-    "@microsoft/mgt-spfx": "^3.0.0",
+    "@microsoft/mgt-sharepoint-provider": "^3.0.0",
+    "@microsoft/mgt-spfx-utils": "^3.0.0",
     "@microsoft/sp-component-base": "1.17.4",
     "@microsoft/sp-core-library": "1.17.4",
     "@microsoft/sp-lodash-subset": "1.17.4",
