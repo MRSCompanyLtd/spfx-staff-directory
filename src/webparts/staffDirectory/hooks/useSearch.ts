@@ -6,21 +6,48 @@ import {
   IAadHttpClientConfiguration
 } from '@microsoft/sp-http';
 import { WebPartContext } from '@microsoft/sp-webpart-base';
-import useBatch, {
-  IExecuteBatchRequest,
-  IExecuteBatchResponse
-} from './useBatch';
 import { IPerson } from '../interfaces/IPerson';
 
 interface IUseSearch {
   searchByText: (str: string, filterDepartment?: string) => Promise<void>;
-  getInitialLoad: () => Promise<void>;
   getNextPage: () => Promise<void>;
   total: number;
   loading: boolean;
   nextPage: string;
   results: IPerson[];
 }
+
+export interface IExecuteBatchRequest {
+  method: string;
+  url: string;
+  id: string | number;
+  headers?: HeadersInit;
+  body?: string;
+}
+
+export interface IExecuteBatchResponse {
+  id: string | number;
+  status: string;
+  body: string;
+}
+
+const GRAPH_URL = 'https://graph.microsoft.com/v1.0';
+const OPTIONS: IAadHttpClientConfiguration = {
+  headers: {
+    'ConsistencyLevel': 'Eventual',
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  }
+};
+const SELECT = [
+  'id',
+  'displayName',
+  'department',
+  'jobTitle',
+  'businessPhones',
+  'mail',
+  'userPrincipalName'
+]
 
 const useSearch = (
   context: WebPartContext,
@@ -33,25 +60,59 @@ const useSearch = (
   const [total, setTotal] = React.useState<number>(0);
 
   const { client } = useGraphClient(context);
-  const { executeBatch } = useBatch(context);
 
-  const GRAPH_URL = 'https://graph.microsoft.com/v1.0';
-  const OPTIONS: IAadHttpClientConfiguration = {
-    headers: {
-      'ConsistencyLevel': 'Eventual',
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  };
-  const SELECT = [
-    'id',
-    'displayName',
-    'department',
-    'jobTitle',
-    'businessPhones',
-    'mail',
-    'userPrincipalName'
-  ]
+  const executeBatch = React.useCallback(
+    async (
+      method: string,
+      requests: IExecuteBatchRequest[]
+    ): Promise<IExecuteBatchResponse[]> => {
+      const batchBody = {
+        requests: requests.map((item: IExecuteBatchRequest) => ({
+          id: item.id,
+          method,
+          url: item.url,
+          headers: item.headers ?? {},
+          body: item.body ?? {}
+        }))
+      };
+
+      try {
+        if (client) {
+          const res: AadHttpClientResponse = await client.post(
+            `https://graph.microsoft.com/v1.0/$batch`,
+            AadHttpClient.configurations.v1,
+            {
+              headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(batchBody)
+            }
+          );
+
+          const json = await res.json();
+
+          const responses: IExecuteBatchResponse[] = json.responses.map(
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            (val: any) => ({
+              id: val.id,
+              status: val.status,
+              body: val.body
+            })
+          );
+
+          return responses;
+        } else {
+          return [];
+        }
+      } catch (e) {
+        console.error(e);
+
+        return [];
+      }
+    },
+    [client]
+  );
 
   const fetchUserImages = async (people: IPerson[]): Promise<IPerson[]> => {
     const requests: IExecuteBatchRequest[] = people.map((p) => ({
@@ -131,46 +192,6 @@ const useSearch = (
     [client, executeBatch, group, pageSize]
   );
 
-  const getInitialLoad = React.useCallback(async () => {
-    try {
-      if (!client) return;
-
-      setLoading(true);
-
-      const url: string =
-        group !== ''
-          ? `${GRAPH_URL}/groups/${group}/members`
-          : `${GRAPH_URL}/users`;
-
-      const res: AadHttpClientResponse = await client
-        .get(
-          `${url}?$top=${pageSize}&$select=${SELECT.join(',')}&$count=true`,
-          AadHttpClient.configurations.v1
-        )
-        .catch((e) => {
-          console.error(e);
-
-          throw Error(e);
-        });
-
-      if (res.ok) {
-        const values = await res.json();
-        const people = values.value.length > 0 ? await fetchUserImages(values.value) : [];
-        const nextLink = values['@odata.nextLink'];
-        const count = values['@odata.count'];
-
-        setTotal(count);
-        setNextPage(nextLink);
-        setResults(people);
-        setLoading(false);
-      }
-    } catch (e) {
-      console.error('Error getting initial load:', e);
-      
-      setLoading(false);
-    }
-  }, [client, group, pageSize]);
-
   const getNextPage = React.useCallback(async () => {
     try {
       if (!client || !nextPage) return;
@@ -199,9 +220,14 @@ const useSearch = (
     }
   }, [client, nextPage]);
 
+  React.useEffect(() => {
+    if (client) {
+      searchByText('').catch((e) => console.error(e));  
+    }
+  }, [client]);
+
   return {
     searchByText,
-    getInitialLoad,
     getNextPage,
     total,
     loading,

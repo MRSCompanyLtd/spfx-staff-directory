@@ -14,14 +14,14 @@ import {
   PropertyFieldCollectionData
 } from '@pnp/spfx-property-controls/lib/propertyFields/collectionData';
 import * as strings from 'StaffDirectoryWebPartStrings';
-import StaffDirectory from './components/StaffDirectory';
-import { IStaffDirectoryProps } from './components/IStaffDirectoryProps';
 import { IDropdownOption } from 'office-ui-fabric-react';
 import { PropertyFieldToggleWithCallout } from '@pnp/spfx-property-controls';
 import { PropertyPaneGroupSelect } from './controls/GroupSelect/PropertyPaneGroupSelect';
 import { update } from '@microsoft/sp-lodash-subset';
-import { Providers } from '@microsoft/mgt-react';
-import { SharePointProvider } from '@microsoft/mgt-spfx';
+import { Providers } from '@microsoft/mgt-element/dist/es6/providers/Providers';
+import { customElementHelper } from '@microsoft/mgt-element/dist/es6/components/customElementHelper';
+import { SharePointProvider } from '@microsoft/mgt-sharepoint-provider/dist/es6/SharePointProvider';
+import { lazyLoadComponent } from '@microsoft/mgt-spfx-utils';
 
 export interface IStaffDirectoryWebPartProps {
   title: string;
@@ -31,24 +31,30 @@ export interface IStaffDirectoryWebPartProps {
   group: string;
 }
 
+const StaffDirectory = React.lazy(() => import(
+  /* webpackChunkName: "[staffdirectory]" */
+  './components/StaffDirectory'
+  ));
+
+customElementHelper.withDisambiguation('bar');
+
 export default class StaffDirectoryWebPart extends BaseClientSideWebPart<IStaffDirectoryWebPartProps> {
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.ReactElement<IStaffDirectoryProps> =
-      React.createElement(StaffDirectory, {
-        title: this.properties.title,
-        group: this.properties.group,
-        departments: this.properties.departments,
-        showDepartmentFilter: this.properties.showDepartmentFilter,
-        isDarkTheme: this._isDarkTheme,
-        environmentMessage: this._environmentMessage,
-        hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName,
-        pageSize: this.properties.pageSize,
-        context: this.context,
-      });
+    const element: React.FunctionComponentElement<React.SuspenseProps> = lazyLoadComponent(StaffDirectory, {
+      title: this.properties.title,
+      group: this.properties.group,
+      departments: this.properties.departments,
+      showDepartmentFilter: this.properties.showDepartmentFilter,
+      isDarkTheme: this._isDarkTheme,
+      environmentMessage: this._environmentMessage,
+      hasTeamsContext: !!this.context.sdks.microsoftTeams,
+      userDisplayName: this.context.pageContext.user.displayName,
+      pageSize: this.properties.pageSize,
+      context: this.context
+    });
 
     ReactDom.render(element, this.domElement);
   }
