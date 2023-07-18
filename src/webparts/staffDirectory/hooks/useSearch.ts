@@ -34,8 +34,8 @@ export interface IExecuteBatchResponse {
 const GRAPH_URL = 'https://graph.microsoft.com/v1.0';
 const OPTIONS: IAadHttpClientConfiguration = {
   headers: {
-    'ConsistencyLevel': 'Eventual',
-    'Accept': 'application/json',
+    ConsistencyLevel: 'Eventual',
+    Accept: 'application/json',
     'Content-Type': 'application/json'
   }
 };
@@ -47,14 +47,14 @@ const SELECT = [
   'businessPhones',
   'mail',
   'userPrincipalName'
-]
+];
 
 const useSearch = (
   context: WebPartContext,
   group: string,
   pageSize: number
 ): IUseSearch => {
-    const [loading, setLoading] = React.useState<boolean>(false);
+  const [loading, setLoading] = React.useState<boolean>(false);
   const [nextPage, setNextPage] = React.useState<string>('');
   const [results, setResults] = React.useState<IPerson[]>([]);
   const [total, setTotal] = React.useState<number>(0);
@@ -77,34 +77,32 @@ const useSearch = (
       };
 
       try {
-        if (client) {
-          const res: AadHttpClientResponse = await client.post(
-            `https://graph.microsoft.com/v1.0/$batch`,
-            AadHttpClient.configurations.v1,
-            {
-              headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(batchBody)
-            }
-          );
+        if (!client) return [];
 
-          const json = await res.json();
+        const res: AadHttpClientResponse = await client.post(
+          `${GRAPH_URL}/$batch`,
+          AadHttpClient.configurations.v1,
+          {
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(batchBody)
+          }
+        );
 
-          const responses: IExecuteBatchResponse[] = json.responses.map(
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            (val: any) => ({
-              id: val.id,
-              status: val.status,
-              body: val.body
-            })
-          );
+        const json = await res.json();
 
-          return responses;
-        } else {
-          return [];
-        }
+        const responses: IExecuteBatchResponse[] = json.responses.map(
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (val: any) => ({
+            id: val.id,
+            status: val.status,
+            body: val.body
+          })
+        );
+
+        return responses;
       } catch (e) {
         console.error(e);
 
@@ -114,28 +112,33 @@ const useSearch = (
     [client]
   );
 
-  const fetchUserImages = async (people: IPerson[]): Promise<IPerson[]> => {
-    const requests: IExecuteBatchRequest[] = people.map((p) => ({
-      url: `/users/${p.id}/photo/$value`,
-      method: 'GET',
-      id: p.id,
-    }));
-  
-    const responses = await executeBatch('GET', requests);
-  
-    const lookup: Record<string, string> = {};
+  const fetchUserImages = React.useCallback(
+    async (people: IPerson[]): Promise<IPerson[]> => {
+      const requests: IExecuteBatchRequest[] = people.map((p) => ({
+        url: `/users/${p.id}/photo/$value`,
+        method: 'GET',
+        id: p.id
+      }));
 
-    responses.forEach((r: IExecuteBatchResponse) => {
-      lookup[r.id] = r.body;
-    });
-  
-    const updatedPeople = people.map((p) => ({
-      ...p,
-      picture: Object.prototype.hasOwnProperty.call(lookup, p.id) ? lookup[p.id] : undefined,
-    }));
-  
-    return updatedPeople;
-  };
+      const responses = await executeBatch('GET', requests);
+
+      const lookup: Record<string, string> = {};
+
+      responses.forEach((r: IExecuteBatchResponse) => {
+        lookup[r.id] = r.body;
+      });
+
+      const updatedPeople = people.map((p) => ({
+        ...p,
+        picture: Object.prototype.hasOwnProperty.call(lookup, p.id)
+          ? lookup[p.id]
+          : undefined
+      }));
+
+      return updatedPeople;
+    },
+    [executeBatch]
+  );
 
   const searchByText = React.useCallback(
     async (str: string, filterDepartment = '') => {
@@ -159,7 +162,7 @@ const useSearch = (
         url += `$top=${pageSize}&$select=${SELECT.join(',')}&$count=true&`;
 
         if (filterDepartment !== '') {
-          url += `$filter=department eq '${filterDepartment}'`
+          url += `$filter=department eq '${filterDepartment}'`;
         }
 
         const res = await client
@@ -172,7 +175,8 @@ const useSearch = (
 
         if (res.ok) {
           const values = await res.json();
-          const people = values.value.length > 0 ? await fetchUserImages(values.value) : [];
+          const people =
+            values.value.length > 0 ? await fetchUserImages(values.value) : [];
 
           const nextLink = values['@odata.nextLink'];
           const count = values['@odata.count'];
@@ -206,7 +210,8 @@ const useSearch = (
 
       if (res.ok) {
         const values = await res.json();
-        const people = values.value.length > 0 ? await fetchUserImages(values.value) : [];
+        const people =
+          values.value.length > 0 ? await fetchUserImages(values.value) : [];
         const nextLink = values['@odata.nextLink'];
 
         setNextPage(nextLink);
@@ -222,7 +227,7 @@ const useSearch = (
 
   React.useEffect(() => {
     if (client) {
-      searchByText('').catch((e) => console.error(e));  
+      searchByText('').catch((e) => console.error(e));
     }
   }, [client]);
 
