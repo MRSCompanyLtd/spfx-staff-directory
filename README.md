@@ -23,6 +23,8 @@ SharePoint Framework web part to search the company tenant via the Graph API. Ha
 
 > Requires Microsoft Graph API permissions for User.ReadBasic.All (to read the directory) and Chat.Create to initiate a chat via the user popup. Grant these permissions in the SharePoint Admin Center.
 
+> This solution uses Microsoft Graph Toolkit v3. You must install the [sppkg package from Microsoft](https://github.com/microsoftgraph/microsoft-graph-toolkit/releases/tag/v3.1.0) before installing this app.
+
 ## Solution
 
 | Solution    | Author(s)                                               |
