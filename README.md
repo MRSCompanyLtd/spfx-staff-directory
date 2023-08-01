@@ -4,7 +4,7 @@
 
 SharePoint Framework web part to search the company tenant via the Graph API. Has the ability to filter by Microsoft 365 groups and departments.
 
-![image](/assets/sp-staff-directory.gif)
+![image](./sharepoint/assets/demo.gif)
 
 ## Used SharePoint Framework Version
 
