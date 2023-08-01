@@ -16,11 +16,11 @@
     },
     "webApiPermissionRequests": [
       {
-        "resource": "Microsoft.Graph",
+        "resource": "Microsoft Graph",
         "scope": "User.ReadBasic.All"
       },
       {
-        "resource": "Microsoft.Graph",
+        "resource": "Microsoft Graph",
         "scope": "Chat.ReadWrite"
       }
     ],
