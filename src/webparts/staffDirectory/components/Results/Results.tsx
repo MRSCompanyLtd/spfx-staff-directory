@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { IResultsProps } from './IResultsProps';
 import styles from './Results.module.scss';
-import {
-  Person,
-  PersonCardInteraction,
-  PersonViewType
-} from '@microsoft/mgt-react';
 import { Spinner, SpinnerSize, Text } from 'office-ui-fabric-react';
+import { Person } from '@microsoft/mgt-react/dist/es6/spfx';
+import { PersonCardInteraction, PersonViewType } from '@microsoft/mgt-spfx';
 
 const Results: React.FC<IResultsProps> = ({ results, loading }) => {
   const getPhoto = (data: string): string => {

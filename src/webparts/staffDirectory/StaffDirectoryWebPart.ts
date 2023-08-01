@@ -18,10 +18,9 @@ import { IDropdownOption } from 'office-ui-fabric-react';
 import { PropertyFieldToggleWithCallout } from '@pnp/spfx-property-controls';
 import { PropertyPaneGroupSelect } from './controls/GroupSelect/PropertyPaneGroupSelect';
 import { update } from '@microsoft/sp-lodash-subset';
-import { Providers } from '@microsoft/mgt-element/dist/es6/providers/Providers';
-import { customElementHelper } from '@microsoft/mgt-element/dist/es6/components/customElementHelper';
-import { SharePointProvider } from '@microsoft/mgt-sharepoint-provider/dist/es6/SharePointProvider';
-import { lazyLoadComponent } from '@microsoft/mgt-spfx-utils';
+import { IStaffDirectoryProps } from './components/IStaffDirectoryProps';
+import StaffDirectory from './components/StaffDirectory';
+import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
 
 export interface IStaffDirectoryWebPartProps {
   title: string;
@@ -31,19 +30,12 @@ export interface IStaffDirectoryWebPartProps {
   group: string;
 }
 
-const StaffDirectory = React.lazy(() => import(
-  /* webpackChunkName: "[staffdirectory]" */
-  './components/StaffDirectory'
-  ));
-
-customElementHelper.withDisambiguation('bar');
-
 export default class StaffDirectoryWebPart extends BaseClientSideWebPart<IStaffDirectoryWebPartProps> {
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
   public render(): void {
-    const element: React.FunctionComponentElement<React.SuspenseProps> = lazyLoadComponent(StaffDirectory, {
+    const element: React.ReactElement<IStaffDirectoryProps> = React.createElement(StaffDirectory, {
       title: this.properties.title,
       group: this.properties.group,
       departments: this.properties.departments,
