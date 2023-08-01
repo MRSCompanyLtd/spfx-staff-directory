@@ -753,9 +753,9 @@
     tslib "^2.1.0"
 
 "@fluentui/web-components@^2.5.12":
-  version "2.5.15"
-  resolved "https://registry.yarnpkg.com/@fluentui/web-components/-/web-components-2.5.15.tgz#fe47040e04121c9031fa401920f0e4e722b1543b"
-  integrity sha512-qUbO2iHqh+E9qquHdXiRX1/mRrB5NzxwOBxdKhdQPXnffTxiqJU/m6h2FaEPeZXaPPrQiR4lXrVPCRCT5D082g==
+  version "2.5.16"
+  resolved "https://registry.yarnpkg.com/@fluentui/web-components/-/web-components-2.5.16.tgz#8e8a237585e34bc67a8b9c94d4a856f893b42d70"
+  integrity sha512-Ur+DziCm2FtvQoRjx62DH069uTz/HTq0gk9uKmW8K7bmxCS7fYYpV9GFEnK7QdEbdRHyUINE3uFfLEcL6IY3Xg==
   dependencies:
     "@microsoft/fast-colors" "^5.3.0"
     "@microsoft/fast-element" "^1.11.1"
@@ -1321,53 +1321,54 @@
   dependencies:
     loader-utils "1.4.2"
 
-"@microsoft/mgt-components@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/mgt-components/-/mgt-components-3.0.0.tgz#fa7414b6f0c7e809a3285729f7281a252de0dbf1"
-  integrity sha512-1TotBQOBXPb7nzU+d7XYTYap2M4AaM4ANJqE4sUPfaUqL20cU0C72pxy1f13lggr7wus0fHLSX/1wDriBFU6+A==
+"@microsoft/mgt-components@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/mgt-components/-/mgt-components-3.1.0.tgz#7ffcab10751fbbf34a6338c7d3147fd16e82cea1"
+  integrity sha512-cU2VMNaTcxBrTLiJ/L/91JfD46+2Dq5H+asEoXUO5ZXlXfkimV0mLEeMitwk0V5SM1lCy2GT2WV/5/jmvJ2EUg==
   dependencies:
     "@fluentui/web-components" "^2.5.12"
-    "@microsoft/mgt-element" "3.0.0"
+    "@microsoft/mgt-element" "3.1.0"
     "@microsoft/microsoft-graph-client" "3.0.2"
     "@microsoft/microsoft-graph-types" "^2.0.0"
     "@microsoft/microsoft-graph-types-beta" "^0.29.0-preview"
     office-ui-fabric-core "^11.0.0"
 
-"@microsoft/mgt-element@3.0.0", "@microsoft/mgt-element@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/mgt-element/-/mgt-element-3.0.0.tgz#57055cec41c5fdc55a3e4541cab96299e59c2fff"
-  integrity sha512-8c1juTfSrOLhBQ9BwhHrCda2KF/q0CRn4/2YDVxE7OrEZG5L0lWJPL0gaBqgqQatG0rAOuZgeZwo6bM/xYt5/Q==
+"@microsoft/mgt-element@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/mgt-element/-/mgt-element-3.1.0.tgz#2d06aae1cc88c5a78689aaba63200af0969fdf35"
+  integrity sha512-Ni60TJu7C471RR9qjLiSa72vNcQWbUgLyT31hC76x52HNjJbAQdQ1o+HeSlRfgsE4ybStcY/wEDyImrGWE1txA==
   dependencies:
     "@microsoft/microsoft-graph-client" "3.0.2"
     idb "6.0.0"
     lit "^2.3.1"
 
-"@microsoft/mgt-react@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/mgt-react/-/mgt-react-3.0.0.tgz#85af2718302a66ce98ef48809822b5a81bf46bee"
-  integrity sha512-wXyvwRqlksDwyC9krgnnCuAXFcqKEkwnEr7MqKTOBOkUZIJQO/wLpLVCgif4vqdULs6OOIWdN86BRzpYIipS6g==
+"@microsoft/mgt-react@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/mgt-react/-/mgt-react-3.1.0.tgz#18ebe8db7ca0c6621e958b0d065fc4e911990e96"
+  integrity sha512-kTYtRpE318mQ+0iCg/G091+9OyuvMGIul18uh6ms/YHqxpTPyKdmr5EN9JbGbVjXaEWKUpE/rgs+OjHwvpNcoQ==
   dependencies:
-    "@microsoft/mgt-components" "3.0.0"
-    "@microsoft/mgt-element" "3.0.0"
+    "@microsoft/mgt-components" "3.1.0"
+    "@microsoft/mgt-element" "3.1.0"
     "@microsoft/microsoft-graph-types" "^2.0.0"
     "@microsoft/microsoft-graph-types-beta" "^0.29.0-preview"
     wc-react "^0.5.0"
 
-"@microsoft/mgt-sharepoint-provider@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/mgt-sharepoint-provider/-/mgt-sharepoint-provider-3.0.0.tgz#24407955ea281787a0aea7ac55bb713597326008"
-  integrity sha512-g00lejleS5rqSLn4JvujiN2BbFcBeKg0SXMAd1UFBH7B2zFX1d0mnMcpRyF42cDo42wKVCwiYumQkFdsfa49uA==
+"@microsoft/mgt-sharepoint-provider@3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/mgt-sharepoint-provider/-/mgt-sharepoint-provider-3.1.0.tgz#86e01c3bcd4b189dc8401410cef1f923673b1a8f"
+  integrity sha512-wcsJS7pvJkRUNpfmhga8GNuS8EM3fOwX4gVrJ3X5p8T8L7ofvL8/XCHs0eHfiHAyOA/XqM7ykyU6xrGjLfRdxw==
   dependencies:
-    "@microsoft/mgt-element" "3.0.0"
+    "@microsoft/mgt-element" "3.1.0"
 
-"@microsoft/mgt-spfx-utils@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/mgt-spfx-utils/-/mgt-spfx-utils-3.0.0.tgz#96bfa2e5e623775c5eb59f20aeb04da6f599e182"
-  integrity sha512-VbP+oHDkT5XGR2ZHcaH3DSp2j4xCjc8brlSnemAmejSNixFwqY10kbMAVqbUDtp23RuTbK1XtJ/OatThO1/jhA==
+"@microsoft/mgt-spfx@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/mgt-spfx/-/mgt-spfx-3.1.0.tgz#0f9fd95a85eabdf620f27616bada24d298237539"
+  integrity sha512-xKijGVkOUKBXuvp7PC6XC39x2ozgWFMHFYPu+YAJeyKnyluQv+23wbBMt6VpcvHnquFH0DD4nsVCA5DW4S4juQ==
   dependencies:
-    "@microsoft/mgt-components" "3.0.0"
-    "@types/react" "^17.0.00"
-    react "^17.0.1"
+    "@microsoft/mgt-components" "3.1.0"
+    "@microsoft/mgt-element" "3.1.0"
+    "@microsoft/mgt-sharepoint-provider" "3.1.0"
+    tslib "2.3.1"
 
 "@microsoft/microsoft-graph-client@3.0.2":
   version "3.0.2"
@@ -1392,9 +1393,9 @@
   integrity sha512-83PCHDH7GxW8KM1J+MM6FPbaahIuj7VIgnY4UbMGQkkq2fBaHeKOmgjVbohvLVeIOOCTLmorPh6JtXH0VtFurA==
 
 "@microsoft/microsoft-graph-types@^2.0.0":
-  version "2.35.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/microsoft-graph-types/-/microsoft-graph-types-2.35.0.tgz#e1cd5dbfb4057dbeb8400803770eeea9014536c0"
-  integrity sha512-3jCQyKaYbNuzVG884SNuWKS19FPUxBwHfDAb3DqZWBwPYcX3HbDe2D22z9Ue+UV+JGuw917cH75RTSgrdnutFg==
+  version "2.38.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/microsoft-graph-types/-/microsoft-graph-types-2.38.0.tgz#abd61ba898b56eae6d6b3186ca9ac37541d3b92b"
+  integrity sha512-EXpTf/TFUb0EfBXiQ0rTmZf6fRgBn73lNfYdU2QKvqiMPQD/Cs2Gt+VmWVtK19F9Mf5Mt4bDTu5Ft0TGXOF8rA==
 
 "@microsoft/rush-lib@5.93.1":
   version "5.93.1"
@@ -1453,6 +1454,23 @@
     import-lazy "~4.0.0"
     typescript "~4.5.5"
 
+"@microsoft/sp-adaptive-card-extension-base@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-adaptive-card-extension-base/-/sp-adaptive-card-extension-base-1.17.3.tgz#324e18abb4bb02820d3a70a047db1afc660dba5c"
+  integrity sha512-3rXAxLzwCFUIP2ngTB1aurTMiFwSYP1MzvuEmj4NW5zElhYg+kFr0MMqCrBYkSdEXKDLZ++B9b5uKxAInW+gMQ==
+  dependencies:
+    "@microsoft/sp-component-base" "1.17.3"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-http" "1.17.3"
+    "@microsoft/sp-http-base" "1.17.3"
+    "@microsoft/sp-loader" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-module-interfaces" "1.17.3"
+    "@microsoft/sp-property-pane" "1.17.3"
+    adaptivecards "2.11.1"
+    tslib "2.3.1"
+
 "@microsoft/sp-build-core-tasks@1.17.4":
   version "1.17.4"
   resolved "https://registry.yarnpkg.com/@microsoft/sp-build-core-tasks/-/sp-build-core-tasks-1.17.4.tgz#e1239a322dc7e31e7937c335ddb5f6b6c2dec59f"
@@ -1493,19 +1511,19 @@
     webpack "~4.44.2"
     yargs "~4.6.0"
 
-"@microsoft/sp-component-base@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-component-base/-/sp-component-base-1.17.1.tgz#b52266b3d317465642f8f3e2af578ffb4963fe20"
-  integrity sha512-jEjhns8Jwo4Xd9qX/FLOZXWzJzWKR0Mg/gY1oo6NAdS/JjJ3/fHFmk2R+i7MMqEoDy7u/aYfJ58RfX1OnfxFDg==
+"@microsoft/sp-component-base@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-component-base/-/sp-component-base-1.17.3.tgz#9567a212259a3f2fcfe0912584a6d0af1b6b4b45"
+  integrity sha512-7Xey4caHNTkz5EtN6BVRj/PUCaLMVV+dYMZbwgoa9grIUFYwGKP8M0m3RZRUUNX9EPaumo+5QUufVVl159nHKA==
   dependencies:
     "@fluentui/react" "^8.106.4"
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-dynamic-data" "1.17.1"
-    "@microsoft/sp-http" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-module-interfaces" "1.17.1"
-    "@microsoft/sp-page-context" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-dynamic-data" "1.17.3"
+    "@microsoft/sp-http" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-module-interfaces" "1.17.3"
+    "@microsoft/sp-page-context" "1.17.3"
     tslib "2.3.1"
 
 "@microsoft/sp-component-base@1.17.4":
@@ -1523,14 +1541,14 @@
     "@microsoft/sp-page-context" "1.17.4"
     tslib "2.3.1"
 
-"@microsoft/sp-core-library@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-core-library/-/sp-core-library-1.17.1.tgz#18b8bfb8c88d0d416edc8cd7926e9e7e3acab930"
-  integrity sha512-8Po/sr9mRP5YXKhziztaSfTmXp64e/2z5TwlcehurK8hg4NvduCfbr+9QAwVlUal0mPnwVUuURnbySTHeNgcqA==
+"@microsoft/sp-core-library@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-core-library/-/sp-core-library-1.17.3.tgz#218c9ceed80bae020f602a0933ac956a0b0f5d4f"
+  integrity sha512-NEMW4xHsiUyFhQnmj2pU4pEQB1Dy5QoZNU0Qys66PXdJFwJgrGn9PUjRReZlN3dyX1jwSzLCgzWU73bJrcB/1w==
   dependencies:
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-module-interfaces" "1.17.1"
-    "@microsoft/sp-odata-types" "1.17.1"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-module-interfaces" "1.17.3"
+    "@microsoft/sp-odata-types" "1.17.3"
     tslib "2.3.1"
 
 "@microsoft/sp-core-library@1.17.4":
@@ -1561,13 +1579,13 @@
     postcss-modules-values "~4.0.0"
     webpack "~4.44.2"
 
-"@microsoft/sp-diagnostics@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-diagnostics/-/sp-diagnostics-1.17.1.tgz#6e77b776693a928a1e8ad794d878195f04226583"
-  integrity sha512-DeXusDEV4xxI0mlNkOWgxqWwLOit1kqgl5zTTp9HAnxorUwwMkjda6Njd2XSgMZ8yF76y+6lHgN6VukmiH44Xw==
+"@microsoft/sp-diagnostics@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-diagnostics/-/sp-diagnostics-1.17.3.tgz#7007d289c234504338451ed9b26f8adba57450db"
+  integrity sha512-vUFkFr78QCEEXgiWNbWjI8mUUDKPXVX0/eSVuAClXhENmxRqhS4nvkckTm/acmXvcw8az3G1r2ou6Q7hFX3d9Q==
   dependencies:
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
 
 "@microsoft/sp-diagnostics@1.17.4":
   version "1.17.4"
@@ -1577,15 +1595,15 @@
     "@microsoft/sp-core-library" "1.17.4"
     "@microsoft/sp-lodash-subset" "1.17.4"
 
-"@microsoft/sp-dynamic-data@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-dynamic-data/-/sp-dynamic-data-1.17.1.tgz#a77c5a7f0d92b5c073533e554ba6b768e727c0fc"
-  integrity sha512-qczB4iScDPNRwTUle2S9ke1XnlgQVCv7Zl6ooJHUIjkcxPJucM9CAQ8klVBbMzbBdrLdcCFtHlDIVbwDVJboyQ==
+"@microsoft/sp-dynamic-data@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-dynamic-data/-/sp-dynamic-data-1.17.3.tgz#59b0b4ebfb86367887dd44eb2fad1f1842073047"
+  integrity sha512-+lE9U+28JjrV5Q5NucntkbLyx5LvdipQU0ppvti1SuEHCnetqPOVEI/axUjY1MbvmLBHngQUFj/U4UAIQse9KQ==
   dependencies:
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-module-interfaces" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-module-interfaces" "1.17.3"
     tslib "2.3.1"
 
 "@microsoft/sp-dynamic-data@1.17.4":
@@ -1599,15 +1617,15 @@
     "@microsoft/sp-module-interfaces" "1.17.4"
     tslib "2.3.1"
 
-"@microsoft/sp-http-base@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-http-base/-/sp-http-base-1.17.1.tgz#d23da838ba67e9532ecac965ddcc21a2da0e6343"
-  integrity sha512-4mOkmhf8OfEMi2c0QBWfkF91q4M4Pej/oqWe3b7ki4q22DvH3T83GmsveWFsRBVIj2YOXpOzyLBl9tIBkTnYdw==
+"@microsoft/sp-http-base@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-http-base/-/sp-http-base-1.17.3.tgz#c95540a19643e2da78fd18308d2be80a3b2a7183"
+  integrity sha512-D0KsLakRuR1iDZa27CSEhW84KPs9/BMIaezxK/M3076WyldRtA0zQwk8rwmoDgU3K3GqqspwP0T0KWT9QH3t4w==
   dependencies:
     "@azure/msal-browser" "2.28.1"
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-page-context" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-page-context" "1.17.3"
     "@microsoft/teams-js-v2" "npm:@microsoft/teams-js@2.9.1"
     adal-angular "1.0.16"
     msal "1.4.17"
@@ -1631,16 +1649,16 @@
     msalLegacy "npm:msal@1.4.12"
     tslib "2.3.1"
 
-"@microsoft/sp-http-msgraph@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-http-msgraph/-/sp-http-msgraph-1.17.1.tgz#2e195bf6b7c639008288658779750de0edb03a8d"
-  integrity sha512-MX4ZvZ8+FeH79Jeac+NQv2v1DPvnMnEv694FV1ilKQN0wwLquZTyDqRT5IzL3WUAQuNrj9FOVWFnBj4UBpxkpg==
+"@microsoft/sp-http-msgraph@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-http-msgraph/-/sp-http-msgraph-1.17.3.tgz#dd80766230cd0ac5bc85a9880099673b02b7fdc6"
+  integrity sha512-2ZbDZaNFGNg6nAvkOzEK0hjqkj9f+cN+ugZSFAANoF8wV7szYA/wRcLjvM+Kq3Ol7fGu/OrQeHrTEBWBekP2XQ==
   dependencies:
     "@microsoft/microsoft-graph-clientv1" "npm:@microsoft/microsoft-graph-client@1.7.2-spfx"
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-http-base" "1.17.1"
-    "@microsoft/sp-loader" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-http-base" "1.17.3"
+    "@microsoft/sp-loader" "1.17.3"
     tslib "2.3.1"
 
 "@microsoft/sp-http-msgraph@1.17.4":
@@ -1655,16 +1673,16 @@
     "@microsoft/sp-loader" "1.17.4"
     tslib "2.3.1"
 
-"@microsoft/sp-http@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-http/-/sp-http-1.17.1.tgz#9acf77e5720514fcf08f08046c61b306da1db7df"
-  integrity sha512-KEECXTbQSkxfCYH3Lu3+lPHl/wRbfexkNLa4JNtRMvMluam6FNb+5mKtQSIlqdtRyEAk/7gmv2dSvMb9WrKOHg==
+"@microsoft/sp-http@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-http/-/sp-http-1.17.3.tgz#c7cb434bbc907042de0d6f5397d4cc7215a1da9e"
+  integrity sha512-7ctnBEJd8ak4VLSPakMX42GF/DAz66RL5dlPJzx16e2pycJoNIKL0vBsEalZ5RWmkcjE6jGRi2xtSPwhIiJWlA==
   dependencies:
     "@microsoft/microsoft-graph-clientv1" "npm:@microsoft/microsoft-graph-client@1.7.2-spfx"
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-http-base" "1.17.1"
-    "@microsoft/sp-http-msgraph" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-http-base" "1.17.3"
+    "@microsoft/sp-http-msgraph" "1.17.3"
     tslib "2.3.1"
 
 "@microsoft/sp-http@1.17.4":
@@ -1679,18 +1697,18 @@
     "@microsoft/sp-http-msgraph" "1.17.4"
     tslib "2.3.1"
 
-"@microsoft/sp-image-helper@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-image-helper/-/sp-image-helper-1.17.1.tgz#87e959af7d17f047a25e8bc2dd73dee88b875185"
-  integrity sha512-OAw8R2T/CP95HF7/UAq1DFTQzGsm+bUXj2Fx96ofOHjR7sWlGXij2rmhzfT50tp2Q+s6XTsiWfLQwm3g2P9iPA==
+"@microsoft/sp-image-helper@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-image-helper/-/sp-image-helper-1.17.3.tgz#99c15c0a4e40d23186020973ba22c27de3722d29"
+  integrity sha512-Kbw/v2f3STTxcucRPBgJWuVaYY6K4oMhWK4WuSRWKFfOZX3xTlznzBbNQLf5OWTwrsDngoFDoyREI3spME5UbQ==
   dependencies:
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-http" "1.17.1"
-    "@microsoft/sp-http-base" "1.17.1"
-    "@microsoft/sp-loader" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-page-context" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-http" "1.17.3"
+    "@microsoft/sp-http-base" "1.17.3"
+    "@microsoft/sp-loader" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-page-context" "1.17.3"
     tslib "2.3.1"
 
 "@microsoft/sp-image-helper@1.17.4":
@@ -1707,20 +1725,20 @@
     "@microsoft/sp-page-context" "1.17.4"
     tslib "2.3.1"
 
-"@microsoft/sp-loader@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-loader/-/sp-loader-1.17.1.tgz#f7f6d9c0b2966c63d599d67a1537522ff42d8a9f"
-  integrity sha512-MhY9l28dYvBUZ3dz6ZobHfZNDshBWSeNb0pgE6iAUm1OmjaAa60eCx1h7/c7puzhr9lvDyyoHWYrZuOpRyYRFw==
+"@microsoft/sp-loader@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-loader/-/sp-loader-1.17.3.tgz#91ec741ccd41e20d76d5edfe08a8f0b32bc638de"
+  integrity sha512-qmG5XoXSuHyAeryeuNQIGIEMKePEGkxmPhgULnGLX6chGKLimtVL+SzOc8+hVet49Rr1B6eIIMaIV6ajZx/qoQ==
   dependencies:
     "@fluentui/react" "^8.106.4"
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-dynamic-data" "1.17.1"
-    "@microsoft/sp-http-base" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-module-interfaces" "1.17.1"
-    "@microsoft/sp-odata-types" "1.17.1"
-    "@microsoft/sp-page-context" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-dynamic-data" "1.17.3"
+    "@microsoft/sp-http-base" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-module-interfaces" "1.17.3"
+    "@microsoft/sp-odata-types" "1.17.3"
+    "@microsoft/sp-page-context" "1.17.3"
     "@rushstack/loader-raw-script" "1.3.281"
     "@types/requirejs" "2.1.29"
     raw-loader "~0.5.1"
@@ -1751,10 +1769,10 @@
     requirejs "2.3.6"
     tslib "2.3.1"
 
-"@microsoft/sp-lodash-subset@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-lodash-subset/-/sp-lodash-subset-1.17.1.tgz#72b39dda0ed03043550068b22dbc600cfaab1ada"
-  integrity sha512-IbZKAbkKkiOOFCVEPXa6QclgJ8Cz3ufoAoHhJ7H+iuDGVa2/586Hk7oz3w7b04ds3MdlSk3CUpvXz6N7oTBdBw==
+"@microsoft/sp-lodash-subset@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-lodash-subset/-/sp-lodash-subset-1.17.3.tgz#187bb47712fd8a9984331731697be63c5c971663"
+  integrity sha512-VmtfG+hcJVxnBcrU4atlOFEUwpRYgJjAj993cg+VacLNYtevf2AVdqkvhRNguXM8smJZdKpMJj1ygtPhdrdBxg==
   dependencies:
     "@types/lodash" "4.14.117"
     tslib "2.3.1"
@@ -1767,10 +1785,10 @@
     "@types/lodash" "4.14.117"
     tslib "2.3.1"
 
-"@microsoft/sp-module-interfaces@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-module-interfaces/-/sp-module-interfaces-1.17.1.tgz#4669c1804e331896714aa95b25e233ac4445f17f"
-  integrity sha512-dv22nv359IxWj2+llnhec0kZ/qhtxo9dLZ2XcvzciJpSCL0lRfNJizox/7+ypU9oGUTL3wQyT3QFcCu3/zTtyg==
+"@microsoft/sp-module-interfaces@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-module-interfaces/-/sp-module-interfaces-1.17.3.tgz#5ee20d1fb8c9a95d45bb7321f219d628e34d951d"
+  integrity sha512-oj+C9RA++Gxy6AN5t5DOLRLsvRvGjRIoccbrN1nCbzm/ZPdJFjFoh6EWlEpYlS1S1YMzR/kyfAHpguQtRHiq2A==
   dependencies:
     "@rushstack/node-core-library" "3.55.2"
     z-schema "4.2.4"
@@ -1783,10 +1801,10 @@
     "@rushstack/node-core-library" "3.55.2"
     z-schema "4.2.4"
 
-"@microsoft/sp-odata-types@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-odata-types/-/sp-odata-types-1.17.1.tgz#25b63ff9a5b8f9a6fbe59f65de0ab2c5144c8cc3"
-  integrity sha512-v059E1kUTcywY4bJzCgsQE5O6W0sAZOT2+MHPq5+BOkJVrll9JNOMrmWRFe5/GLj1fKgoyfY3GjKWKf8Q7tjsw==
+"@microsoft/sp-odata-types@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-odata-types/-/sp-odata-types-1.17.3.tgz#ec4d73d89df41636f8d6bb3c007511e15e1177f8"
+  integrity sha512-fKRaTasv2LXwcgFyPLWDknq82WtHyD842btjO1pg3V57vLc0/Tw4PWNIDZDOWH79RCBE7248957IogNw+TqKkg==
   dependencies:
     tslib "2.3.1"
 
@@ -1797,10 +1815,10 @@
   dependencies:
     tslib "2.3.1"
 
-"@microsoft/sp-office-ui-fabric-core@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-office-ui-fabric-core/-/sp-office-ui-fabric-core-1.17.1.tgz#dc5148797efa2e482548428acb8a0dbda35fb2c1"
-  integrity sha512-Ah8H1PDqC2IkvV50bk0P95Hr9JcA93dULbYQ8Mop2cv/5byfGGEHm0fosvG8CD2i5vu4ibIg0KJIwmXPZSvMPg==
+"@microsoft/sp-office-ui-fabric-core@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-office-ui-fabric-core/-/sp-office-ui-fabric-core-1.17.3.tgz#a443ead3c22a5135c67344a99c437ed12d2deee7"
+  integrity sha512-1PE/C0fdbwcxWltrI0kG7Sayl1RIZilsfgU2UjmEIwry4Ltss3YLfAIgp9QOfMsinbvJnj/MN6fXSkFjcXW9fg==
   dependencies:
     office-ui-fabric-core "11.0.1"
     tslib "2.3.1"
@@ -1813,16 +1831,16 @@
     office-ui-fabric-core "11.0.1"
     tslib "2.3.1"
 
-"@microsoft/sp-page-context@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-page-context/-/sp-page-context-1.17.1.tgz#9a5e8045755324c4da87e8c713c3c957ba78b9a3"
-  integrity sha512-54IsoVh59wbC6LsdJgwWJUiHT7Lu/r30xE4z0Z2287+7+xYYGGdp97dn6EaGG67o8Tr1E0q9IpbCfYqyZowdCw==
+"@microsoft/sp-page-context@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-page-context/-/sp-page-context-1.17.3.tgz#5038b8ad00e02b6eaac7aea699ffee7627788c61"
+  integrity sha512-Qrr+GHWS2LVvMpNeIc+YL62ywqKBb2aEhk92ouea7VIXGjJAZA6O3SM45RJCG5dBKgA3oANPkhYyPRhPOR/VbQ==
   dependencies:
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-dynamic-data" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-odata-types" "1.17.1"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-dynamic-data" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-odata-types" "1.17.3"
     tslib "2.3.1"
 
 "@microsoft/sp-page-context@1.17.4":
@@ -1837,19 +1855,19 @@
     "@microsoft/sp-odata-types" "1.17.4"
     tslib "2.3.1"
 
-"@microsoft/sp-property-pane@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-property-pane/-/sp-property-pane-1.17.1.tgz#b6947820d47b5692a4b7308c9591a3ddb325992b"
-  integrity sha512-ZPFKHFV8vD+kMmM4exEFWL7JITy8+hdrdQ6DNGtD2/iNYpfiS04wvblNhhSC0jkSujB7ijkeKf/1niUPKm1QtA==
+"@microsoft/sp-property-pane@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-property-pane/-/sp-property-pane-1.17.3.tgz#cd69afeef2859a5cd8446f9ed7f2dbc4078a2d64"
+  integrity sha512-mARwiFXWrj0GL8vNLlhBgp8zyCmuaNlXYul6QKSajkjYp52W5Im3ff9IVWqGxZT0ZinfVkFBXsxtFrxGKP87iw==
   dependencies:
     "@fluentui/react" "^8.106.4"
-    "@microsoft/sp-component-base" "1.17.1"
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-dynamic-data" "1.17.1"
-    "@microsoft/sp-image-helper" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-page-context" "1.17.1"
+    "@microsoft/sp-component-base" "1.17.3"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-dynamic-data" "1.17.3"
+    "@microsoft/sp-image-helper" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-page-context" "1.17.3"
     react "17.0.1"
     react-dom "17.0.1"
     tslib "2.3.1"
@@ -1871,34 +1889,34 @@
     react-dom "17.0.1"
     tslib "2.3.1"
 
-"@microsoft/sp-top-actions@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-top-actions/-/sp-top-actions-1.17.1.tgz#fffe85b3fe82ea38fc17803d8d822d0c18dc80e0"
-  integrity sha512-sp7KllsTEdFq4fTcUJKgxFuaF/V1Z3ZMrtvYakd3eqCcpnJOFSSA38v/NLq26GpxPPvgSHl0x5zerKL8yuJQBA==
+"@microsoft/sp-top-actions@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-top-actions/-/sp-top-actions-1.17.3.tgz#703f248c3ae19a9f457fffd81066fb559380c457"
+  integrity sha512-4mcKHak7+OWx3Vi+R3eQth9kUL3VXSIIile77XC8aeMXsBFYb2hUZQsOaR1zmRJ6WOHUGRg08BRXm4LBbCMpDg==
 
 "@microsoft/sp-top-actions@1.17.4":
   version "1.17.4"
   resolved "https://registry.yarnpkg.com/@microsoft/sp-top-actions/-/sp-top-actions-1.17.4.tgz#d0395fd423bf7451d6bf934d0ce4a46d5cfe9b1b"
   integrity sha512-jSwMihjw218eDq49pT3ac8Av0YwuuxRbFmyK6cFbi35ZcKiUEF6vRDJdyra3Cb3TAW72ubf8LfGwLvJnJpMpOQ==
 
-"@microsoft/sp-webpart-base@1.17.1":
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/sp-webpart-base/-/sp-webpart-base-1.17.1.tgz#db0ab7f7ec6412b60f6c03dbe659dc06ee82d8f0"
-  integrity sha512-elVjlWeto4n9RAFoX5igVS1VErmpXaoya1cz+s1v48S2o9cBUJZ82Ln4pesPxx3QSQm1JE6V20aYEr48cpn/Ig==
+"@microsoft/sp-webpart-base@1.17.3":
+  version "1.17.3"
+  resolved "https://registry.yarnpkg.com/@microsoft/sp-webpart-base/-/sp-webpart-base-1.17.3.tgz#cb4f63befa90cdbe0153ac7ea5991618b1b7e921"
+  integrity sha512-lPyKHVedAU1dNlTO+aRVNCy/Bbs0C+UTjP5aWzEpj8mvzyV01zn0ZGT20msPa0TKxb2ctsfDomqMVZIXq7TUhQ==
   dependencies:
     "@fluentui/react" "^8.106.4"
-    "@microsoft/sp-component-base" "1.17.1"
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-diagnostics" "1.17.1"
-    "@microsoft/sp-dynamic-data" "1.17.1"
-    "@microsoft/sp-http" "1.17.1"
-    "@microsoft/sp-http-base" "1.17.1"
-    "@microsoft/sp-loader" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-module-interfaces" "1.17.1"
-    "@microsoft/sp-page-context" "1.17.1"
-    "@microsoft/sp-property-pane" "1.17.1"
-    "@microsoft/sp-top-actions" "1.17.1"
+    "@microsoft/sp-component-base" "1.17.3"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-diagnostics" "1.17.3"
+    "@microsoft/sp-dynamic-data" "1.17.3"
+    "@microsoft/sp-http" "1.17.3"
+    "@microsoft/sp-http-base" "1.17.3"
+    "@microsoft/sp-loader" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-module-interfaces" "1.17.3"
+    "@microsoft/sp-page-context" "1.17.3"
+    "@microsoft/sp-property-pane" "1.17.3"
+    "@microsoft/sp-top-actions" "1.17.3"
     "@microsoft/teams-js-v2" "npm:@microsoft/teams-js@2.9.1"
     "@types/office-js" "1.0.36"
     react "17.0.1"
@@ -2105,16 +2123,18 @@
   dependencies:
     tslib "1.10.0"
 
-"@pnp/spfx-property-controls@^3.13.0":
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/@pnp/spfx-property-controls/-/spfx-property-controls-3.13.0.tgz#90624abbb032a43a62f72f3fe6a4f83c8008368b"
-  integrity sha512-zvPMiVwaKFBeT12fZ6icTU71ZYIqBKBZnNWv82eumYCUP2AHKv4Zk8FmtKK/Ebmw1vbbu+KZbPWEEcZQWu96Eg==
+"@pnp/spfx-property-controls@^3.14.0":
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/@pnp/spfx-property-controls/-/spfx-property-controls-3.14.0.tgz#14612768ddd0e17aa0030b1b8e30e1b6de2ef604"
+  integrity sha512-m4mGlAMP2CcNUxK++t939Wf5lo8Eue2afagJ2KsSmBcWD9IhEMeTXRdrT6ruiy/hnGcWPuVSAtG3tVW2iZ4d9g==
   dependencies:
-    "@microsoft/sp-core-library" "1.17.1"
-    "@microsoft/sp-lodash-subset" "1.17.1"
-    "@microsoft/sp-office-ui-fabric-core" "1.17.1"
-    "@microsoft/sp-property-pane" "1.17.1"
-    "@microsoft/sp-webpart-base" "1.17.1"
+    "@fluentui/react" "^7.199.1"
+    "@microsoft/sp-adaptive-card-extension-base" "1.17.3"
+    "@microsoft/sp-core-library" "1.17.3"
+    "@microsoft/sp-lodash-subset" "1.17.3"
+    "@microsoft/sp-office-ui-fabric-core" "1.17.3"
+    "@microsoft/sp-property-pane" "1.17.3"
+    "@microsoft/sp-webpart-base" "1.17.3"
     "@monaco-editor/loader" "^1.2.0"
     "@pnp/common" "1.3.11"
     "@pnp/logging" "1.3.11"
@@ -2993,7 +3013,7 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^17", "@types/react@^17.0.00":
+"@types/react@^17":
   version "17.0.62"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.62.tgz#2efe8ddf8533500ec44b1334dd1a97caa2f860e3"
   integrity sha512-eANCyz9DG8p/Vdhr0ZKST8JV12PhH2ACCDYlFw6DIO+D+ca+uP4jtEDEpVqXZrh/uZdXQGwk7whJa3ah5DtyLw==
@@ -3861,6 +3881,11 @@ adal-angular@1.0.17:
   version "1.0.17"
   resolved "https://registry.yarnpkg.com/adal-angular/-/adal-angular-1.0.17.tgz#6e936e0e41f91d3b2a88e7ffca9c2f6f6f562cc4"
   integrity sha512-+Z9aq7L25OncsaVcnhSsi7AMR/dlg0gWVNptsdtkL9Ih7hA1oJ14mhWB60CB83JF6DlzamVKLMGbrAcgFQqhCg==
+
+adaptivecards@2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/adaptivecards/-/adaptivecards-2.11.1.tgz#0889d9fc79395bcb682a7cb96486f76a386d66d3"
+  integrity sha512-dyF23HK+lRMEreexJgHz4y9U5B0ZuGk66N8nhwXRnICyYjq8hE4A6n8rLoV/CNY2QAZ0iRjOIR2J8U7M1CKl8Q==
 
 agent-base@6:
   version "6.0.2"
@@ -12139,14 +12164,6 @@ react@17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
   integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
-react@^17.0.1:
-  version "17.0.2"
-  resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
-  integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
