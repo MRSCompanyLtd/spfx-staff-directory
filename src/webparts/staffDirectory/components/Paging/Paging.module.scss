@@ -4,10 +4,11 @@
     display: flex;
     height: 48px;
     padding: 0 8px;
+    border-radius: 2px;
     align-items: center;
     flex-grow: 1;
     justify-content: space-between;
-    background: $ms-color-neutralLight;
+    background: "[theme: neutralLight, default: #f3f2f1]";
     box-sizing: border-box;
 }
 
@@ -28,21 +29,21 @@
 }
 
 .page {
-    color: black;
+    color: "[theme: black, default: #000000]";
 }
 
 .active {
-    color: $ms-color-white;
+    color: "[theme: white, default: #ffffff]";
+    background-color: "[theme: themePrimary, default: #0078d4]";
     cursor: default;
-    background: $ms-color-themePrimary;
 
     &:hover {
-        background: $ms-color-themePrimary;
-        color: $ms-color-white;
+        background: "[theme: themePrimary, default: #0078d4]";
     }
 }
 
 .count {
+    color: "[theme: black, default: #000]";
     & span {
         font-size: 14px;
     }
