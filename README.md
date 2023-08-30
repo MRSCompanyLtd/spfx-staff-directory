@@ -35,7 +35,8 @@ SharePoint Framework web part to search the company tenant via the Graph API. Ha
 
 | Version | Date             | Comments        |
 | ------- | ---------------- | --------------- |
-| 1.0     | July 17, 2023 | Initial release |
+| 1.1     | August 30, 2023 | Updated API scopes |
+| 1.0     | July 17, 2023   | Initial release |
 
 ## Disclaimer
 
