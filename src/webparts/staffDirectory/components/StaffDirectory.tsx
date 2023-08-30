@@ -8,6 +8,7 @@ import Results from './Results/Results';
 import Paging from './Paging/Paging';
 import { IPerson } from '../interfaces/IPerson';
 import { Dropdown, IDropdownOption, Text } from 'office-ui-fabric-react';
+import './global.css';
 
 interface IStaffDirectoryState {
   search: string;

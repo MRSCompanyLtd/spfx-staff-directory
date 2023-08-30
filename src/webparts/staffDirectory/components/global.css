@@ -1,0 +1,5 @@
+body {
+    --person-line1-text-color: "[theme: bodyText, default: #333333]";
+    --person-line2-text-color: "[theme: topBarText, default: #373737]";
+    --person-line3-text-color: "[theme: topBarText, default: #373737]";
+}
