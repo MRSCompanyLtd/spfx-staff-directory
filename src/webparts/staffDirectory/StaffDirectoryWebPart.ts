@@ -178,8 +178,8 @@ export default class StaffDirectoryWebPart extends BaseClientSideWebPart<IStaffD
                   label: strings.PageSizeFieldLabel,
                   showValue: true,
                   max: 20,
-                  min: 6,
-                  step: 2,
+                  min: 1,
+                  step: 1,
                   value: this.properties.pageSize
                 }),
                 new PropertyPaneGroupSelect('group', {
